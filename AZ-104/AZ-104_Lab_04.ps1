@@ -3,6 +3,7 @@ $ErrorActionPreference = "Stop"
 $WarningPreference = "Ignore"
 
 # Connect-AzAccount
+
 Write-Output "------------"   
 (Get-AzTenant).Domains
 (Get-AzSubscription).Name
@@ -53,6 +54,7 @@ Get-AzResource -Name $name -ResourceGroupName $rg | Format-Table
 
 
 Write-Output "🍺--- Two VMs ---"
+Write-Output "Please wait for about 5 or 10 minutes..."
 $vm_admin = "Student"
 $vm_password = ConvertTo-SecureString "Pa55w.rd1234" -AsPlainText -Force
 $Credential = New-Object System.Management.Automation.PSCredential ($vm_admin, $vm_password);
