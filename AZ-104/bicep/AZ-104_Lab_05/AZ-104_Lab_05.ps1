@@ -9,7 +9,7 @@ Write-Output "------------"
 (Get-AzSubscription).Name
 Write-Output "------------"   
 
-$rg = 'az104-05-rg1-2'
+$rg = 'az104-05-rg1'
 $location = 'eastus'
 
 # Resource Group
