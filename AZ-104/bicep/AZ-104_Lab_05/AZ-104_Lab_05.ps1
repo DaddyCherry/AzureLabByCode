@@ -29,6 +29,7 @@ $deploy_name = 'bicep'+(Get-Random -Maximum 100000)
 
 New-AzResourceGroupDeployment -Name $deploy_name -ResourceGroupName $rg -TemplateFile ./main.bicep `
 -Mode Complete `
+-Force `
 # -Whatif
 
 
