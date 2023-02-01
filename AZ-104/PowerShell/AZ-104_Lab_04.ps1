@@ -9,7 +9,7 @@ Write-Output "------------"
 (Get-AzSubscription).Name
 Write-Output "------------"   
 
-$rg = "az104-04-rg1"
+$rg = "az104-04-rg1-demo"
 $location = "eastus"
 
 $vnet_name     = "az104-04-vnet1"
