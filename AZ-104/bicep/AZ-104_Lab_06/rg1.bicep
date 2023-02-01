@@ -526,12 +526,12 @@ resource virtualNetworks_az104_06_vnet01_name_virtualNetworks_az104_06_vnet01_na
     doNotVerifyRemoteGateways: false
     remoteAddressSpace: {
       addressPrefixes: [
-        '10.62.0.0/22'
+        '10.62.0.0/24'
       ]
     }
     remoteVirtualNetworkAddressSpace: {
       addressPrefixes: [
-        '10.62.0.0/22'
+        '10.62.0.0/24'
       ]
     }
   }
@@ -556,12 +556,12 @@ resource virtualNetworks_az104_06_vnet01_name_virtualNetworks_az104_06_vnet01_na
     doNotVerifyRemoteGateways: false
     remoteAddressSpace: {
       addressPrefixes: [
-        '10.63.0.0/22'
+        '10.63.0.0/24'
       ]
     }
     remoteVirtualNetworkAddressSpace: {
       addressPrefixes: [
-        '10.63.0.0/22'
+        '10.63.0.0/24'
       ]
     }
   }
@@ -586,12 +586,12 @@ resource virtualNetworks_az104_06_vnet2_name_virtualNetworks_az104_06_vnet2_name
     doNotVerifyRemoteGateways: false
     remoteAddressSpace: {
       addressPrefixes: [
-        '10.60.0.0/22'
+        '10.60.0.0/24'
       ]
     }
     remoteVirtualNetworkAddressSpace: {
       addressPrefixes: [
-        '10.60.0.0/22'
+        '10.60.0.0/24'
       ]
     }
   }
@@ -616,12 +616,12 @@ resource virtualNetworks_az104_06_vnet3_name_virtualNetworks_az104_06_vnet3_name
     doNotVerifyRemoteGateways: false
     remoteAddressSpace: {
       addressPrefixes: [
-        '10.60.0.0/22'
+        '10.60.0.0/24'
       ]
     }
     remoteVirtualNetworkAddressSpace: {
       addressPrefixes: [
-        '10.60.0.0/22'
+        '10.60.0.0/24'
       ]
     }
   }
