@@ -1,10 +1,11 @@
 param loadBalancers_demolb_name string = 'az104-06-lb4'
 param publicIPAddresses_az104_06_pip4_name string = 'az104-06-pip4'
 
+param location string = resourceGroup().location
 
 resource publicIPAddresses_az104_06_pip4_name_resource 'Microsoft.Network/publicIPAddresses@2022-07-01' = {
   name: publicIPAddresses_az104_06_pip4_name
-  location: 'eastus'
+  location: location
   sku: {
     name: 'Standard'
     tier: 'Regional'
@@ -20,7 +21,7 @@ resource publicIPAddresses_az104_06_pip4_name_resource 'Microsoft.Network/public
 
 resource loadBalancers_demolb_name_resource 'Microsoft.Network/loadBalancers@2022-07-01' = {
   name: loadBalancers_demolb_name
-  location: 'eastus'
+  location: location
   sku: {
     name: 'Standard'
     tier: 'Regional'

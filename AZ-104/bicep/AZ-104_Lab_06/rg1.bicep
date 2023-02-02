@@ -18,13 +18,13 @@ param networkSecurityGroups_az104_06_nsg3_name string = 'az104-06-nsg3'
 param networkSecurityGroups_az104_06_nsg01_name string = 'az104-06-nsg01'
 // param loadBalancers_az104_06_lb4_externalid string = '/subscriptions/421b5f85-9972-4c80-8fc0-227fc7718462/resourceGroups/az104-06-rg4/providers/Microsoft.Network/loadBalancers/az104-06-lb4'
 
-
+param location string = resourceGroup().location
 
 
 
 resource publicIPAddresses_az104_06_pip5_name_resource 'Microsoft.Network/publicIPAddresses@2022-07-01' = {
   name: publicIPAddresses_az104_06_pip5_name
-  location: 'eastus'
+  location: location
   sku: {
     name: 'Standard'
     tier: 'Regional'
@@ -39,7 +39,7 @@ resource publicIPAddresses_az104_06_pip5_name_resource 'Microsoft.Network/public
 
 resource networkSecurityGroups_az104_06_nsg01_name_resource 'Microsoft.Network/networkSecurityGroups@2022-07-01' = {
   name: networkSecurityGroups_az104_06_nsg01_name
-  location: 'eastus'
+  location: location
   properties: {
     securityRules: [
       {
@@ -84,7 +84,7 @@ resource networkSecurityGroups_az104_06_nsg01_name_resource 'Microsoft.Network/n
 
 resource networkSecurityGroups_az104_06_nsg2_name_resource 'Microsoft.Network/networkSecurityGroups@2022-07-01' = {
   name: networkSecurityGroups_az104_06_nsg2_name
-  location: 'eastus'
+  location: location
   properties: {
     securityRules: [
       {
@@ -129,7 +129,7 @@ resource networkSecurityGroups_az104_06_nsg2_name_resource 'Microsoft.Network/ne
 
 resource networkSecurityGroups_az104_06_nsg3_name_resource 'Microsoft.Network/networkSecurityGroups@2022-07-01' = {
   name: networkSecurityGroups_az104_06_nsg3_name
-  location: 'eastus'
+  location: location
   properties: {
     securityRules: [
       {
@@ -174,7 +174,7 @@ resource networkSecurityGroups_az104_06_nsg3_name_resource 'Microsoft.Network/ne
 
 resource virtualNetworks_az104_06_vnet2_name_resource 'Microsoft.Network/virtualNetworks@2022-07-01' = {
   name: virtualNetworks_az104_06_vnet2_name
-  location: 'eastus'
+  location: location
   properties: {
     addressSpace: {
       addressPrefixes: [
@@ -198,7 +198,7 @@ resource virtualNetworks_az104_06_vnet2_name_resource 'Microsoft.Network/virtual
 
 resource virtualNetworks_az104_06_vnet3_name_resource 'Microsoft.Network/virtualNetworks@2022-07-01' = {
   name: virtualNetworks_az104_06_vnet3_name
-  location: 'eastus'
+  location: location
   properties: {
     addressSpace: {
       addressPrefixes: [
@@ -222,7 +222,7 @@ resource virtualNetworks_az104_06_vnet3_name_resource 'Microsoft.Network/virtual
 
 resource virtualNetworks_az104_06_vnet01_name_resource 'Microsoft.Network/virtualNetworks@2022-07-01' = {
   name: virtualNetworks_az104_06_vnet01_name
-  location: 'eastus'
+  location: location
   properties: {
     addressSpace: {
       addressPrefixes: [
@@ -298,7 +298,7 @@ resource virtualNetworks_az104_06_vnet01_name_subnet1 'Microsoft.Network/virtual
 
 resource routeTables_az104_06_rt23_name_resource 'Microsoft.Network/routeTables@2022-07-01' = {
   name: routeTables_az104_06_rt23_name
-  location: 'eastus'
+  location: location
   properties: {
     disableBgpRoutePropagation: true
     routes: [
@@ -318,7 +318,7 @@ resource routeTables_az104_06_rt23_name_resource 'Microsoft.Network/routeTables@
 
 resource routeTables_az104_06_rt32_name_resource 'Microsoft.Network/routeTables@2022-07-01' = {
   name: routeTables_az104_06_rt32_name
-  location: 'eastus'
+  location: location
   properties: {
     disableBgpRoutePropagation: true
     routes: [
@@ -373,7 +373,7 @@ resource virtualNetworks_az104_06_vnet3_name_subnet0 'Microsoft.Network/virtualN
 
 resource networkInterfaces_az104_06_nic0_name_resource 'Microsoft.Network/networkInterfaces@2022-07-01' = {
   name: networkInterfaces_az104_06_nic0_name
-  location: 'eastus'
+  location: location
   kind: 'Regular'
   properties: {
     ipConfigurations: [
@@ -408,7 +408,7 @@ resource networkInterfaces_az104_06_nic0_name_resource 'Microsoft.Network/networ
 
 resource networkInterfaces_az104_06_nic1_name_resource 'Microsoft.Network/networkInterfaces@2022-07-01' = {
   name: networkInterfaces_az104_06_nic1_name
-  location: 'eastus'
+  location: location
   kind: 'Regular'
   properties: {
     ipConfigurations: [
@@ -443,7 +443,7 @@ resource networkInterfaces_az104_06_nic1_name_resource 'Microsoft.Network/networ
 
 resource networkInterfaces_az104_06_nic2_name_resource 'Microsoft.Network/networkInterfaces@2022-07-01' = {
   name: networkInterfaces_az104_06_nic2_name
-  location: 'eastus'
+  location: location
   kind: 'Regular'
   properties: {
     ipConfigurations: [
@@ -478,7 +478,7 @@ resource networkInterfaces_az104_06_nic2_name_resource 'Microsoft.Network/networ
 
 resource networkInterfaces_az104_06_nic3_name_resource 'Microsoft.Network/networkInterfaces@2022-07-01' = {
   name: networkInterfaces_az104_06_nic3_name
-  location: 'eastus'
+  location: location
   kind: 'Regular'
   properties: {
     ipConfigurations: [
@@ -635,7 +635,7 @@ resource virtualNetworks_az104_06_vnet3_name_virtualNetworks_az104_06_vnet3_name
 
 resource virtualMachines_az104_06_vm0_name_resource 'Microsoft.Compute/virtualMachines@2022-08-01' = {
   name: virtualMachines_az104_06_vm0_name
-  location: 'eastus'
+  location: location
   properties: {
     hardwareProfile: {
       vmSize: 'Standard_D2s_v3'
@@ -691,7 +691,7 @@ resource virtualMachines_az104_06_vm0_name_resource 'Microsoft.Compute/virtualMa
 
 resource virtualMachines_az104_06_vm1_name_resource 'Microsoft.Compute/virtualMachines@2022-08-01' = {
   name: virtualMachines_az104_06_vm1_name
-  location: 'eastus'
+  location: location
   properties: {
     hardwareProfile: {
       vmSize: 'Standard_D2s_v3'
@@ -747,7 +747,7 @@ resource virtualMachines_az104_06_vm1_name_resource 'Microsoft.Compute/virtualMa
 
 resource virtualMachines_az104_06_vm2_name_resource 'Microsoft.Compute/virtualMachines@2022-08-01' = {
   name: virtualMachines_az104_06_vm2_name
-  location: 'eastus'
+  location: location
   properties: {
     hardwareProfile: {
       vmSize: 'Standard_D2s_v3'
@@ -803,7 +803,7 @@ resource virtualMachines_az104_06_vm2_name_resource 'Microsoft.Compute/virtualMa
 
 resource virtualMachines_az104_06_vm3_name_resource 'Microsoft.Compute/virtualMachines@2022-08-01' = {
   name: virtualMachines_az104_06_vm3_name
-  location: 'eastus'
+  location: location
   properties: {
     hardwareProfile: {
       vmSize: 'Standard_D2s_v3'
@@ -860,7 +860,7 @@ resource virtualMachines_az104_06_vm3_name_resource 'Microsoft.Compute/virtualMa
 resource virtualMachines_az104_06_vm0_name_customScriptExtension 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm0_name_resource
   name: 'customScriptExtension'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Compute'
@@ -877,7 +877,7 @@ resource virtualMachines_az104_06_vm0_name_customScriptExtension 'Microsoft.Comp
 resource virtualMachines_az104_06_vm1_name_customScriptExtension 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm1_name_resource
   name: 'customScriptExtension'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Compute'
@@ -894,7 +894,7 @@ resource virtualMachines_az104_06_vm1_name_customScriptExtension 'Microsoft.Comp
 resource virtualMachines_az104_06_vm2_name_customScriptExtension 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm2_name_resource
   name: 'customScriptExtension'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Compute'
@@ -911,7 +911,7 @@ resource virtualMachines_az104_06_vm2_name_customScriptExtension 'Microsoft.Comp
 resource virtualMachines_az104_06_vm3_name_customScriptExtension 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm3_name_resource
   name: 'customScriptExtension'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Compute'
@@ -928,7 +928,7 @@ resource virtualMachines_az104_06_vm3_name_customScriptExtension 'Microsoft.Comp
 resource virtualMachines_az104_06_vm0_name_networkWatcherAgent 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm0_name_resource
   name: 'networkWatcherAgent'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Azure.NetworkWatcher'
@@ -940,7 +940,7 @@ resource virtualMachines_az104_06_vm0_name_networkWatcherAgent 'Microsoft.Comput
 resource virtualMachines_az104_06_vm1_name_networkWatcherAgent 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm1_name_resource
   name: 'networkWatcherAgent'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Azure.NetworkWatcher'
@@ -952,7 +952,7 @@ resource virtualMachines_az104_06_vm1_name_networkWatcherAgent 'Microsoft.Comput
 resource virtualMachines_az104_06_vm2_name_networkWatcherAgent 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm2_name_resource
   name: 'networkWatcherAgent'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Azure.NetworkWatcher'
@@ -964,7 +964,7 @@ resource virtualMachines_az104_06_vm2_name_networkWatcherAgent 'Microsoft.Comput
 resource virtualMachines_az104_06_vm3_name_networkWatcherAgent 'Microsoft.Compute/virtualMachines/extensions@2022-08-01' = {
   parent: virtualMachines_az104_06_vm3_name_resource
   name: 'networkWatcherAgent'
-  location: 'eastus'
+  location: location
   properties: {
     autoUpgradeMinorVersion: true
     publisher: 'Microsoft.Azure.NetworkWatcher'
@@ -990,7 +990,7 @@ resource virtualNetworks_az104_06_vnet01_name_subnet_appgw 'Microsoft.Network/vi
 
 resource applicationGateways_az104_06_appgw5_name_resource 'Microsoft.Network/applicationGateways@2022-07-01' = {
   name: applicationGateways_az104_06_appgw5_name
-  location: 'eastus'
+  location: location
   properties: {
     sku: {
       name: 'Standard_v2'
