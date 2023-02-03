@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location1": {
+      "value": "eastus"
+    },
+    "location2": {
+      "value": "eastus2"
+    },
+    "email_for_action_group_notification": {
+      "value": "training0110-3@outlook.jp"
+    },
+    "storage_name": {
+      "value": "az10411rg1sto1180"
+    }
+  }
+}
