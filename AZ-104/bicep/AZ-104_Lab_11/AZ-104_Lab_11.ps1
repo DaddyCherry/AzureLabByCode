@@ -65,7 +65,7 @@ New-AzResourceGroupDeployment -Name $deploy_name -ResourceGroupName $rg1 -Templa
 -Force `
 # -Whatif
 
-Set-AzVMDiagnosticsExtension -ResourceGroupName $rg1 -VMName 'az104-11-vm0' -DiagnosticsConfigurationPath 'VMDiagnosticsSettings.json' -StorageAccountName $storage_name
+Set-AzVMDiagnosticsExtension -ResourceGroupName $rg1 -VMName 'az104-11-vm0' -DiagnosticsConfigurationPath './VMDiagnosticsSettings.json' -StorageAccountName $storage_name
 # Invoke-AzVMRunCommand -ResourceGroupName $rg1 -VMName 'az104-11-vm0' -CommandId 'RunPowerShellScript' -ScriptPath 'echo.ps1'
 
 Write-Output 'セットアップは完了しました。Log AnalyticsとVMを接続し,VMの実行コマンドでwhile(1){echo a}を流してください。'
