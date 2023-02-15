@@ -5,7 +5,7 @@
             "type": "Microsoft.Devices/IotHubs",
             "properties": {
                 "iotHubNamespace": "MyASAIoTHub",
-                "sharedAccessPolicyName": "iothubownerXXXYYY",
+                "sharedAccessPolicyName": "iothubownerXXXYYYZZZZ",
                 "sharedAccessPolicyKey": "accesspolicykey",
                 "endpoint": "messages/events",
                 "consumerGroupName": "$Default"
